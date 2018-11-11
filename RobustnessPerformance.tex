@@ -90,7 +90,7 @@
     \textsc{\Large Rapport Performance et Robustesse}\\[1.5cm]
 
     % Title
-    \HRule \\[0.4cm] % sous de ligne
+    \HRule \\[0.4cm] % saut de ligne
     { \huge \bfseries TP 1 Analyse et performances des systèmes linéaires : Asservissement d'un système à trois bacs d'eau\\[0.4cm] }
 
     \HRule \\[1cm]   % sous de ligne 
@@ -178,15 +178,23 @@ ina win ina thina ;;;;;;;;
    $G(p)=\frac {h_{1}(p)}{q_{e}(p)}=\frac{16p+20}{p^{3}+7p^{2}+12.75p+6.75}$   
    \end{center}
    
-   
+   On considère le premier correcteur de la forme : \\
+   \begin{center}
+   $U(p)=K\frac {1+\tau_{i}p}{\tau_{i}p}\xi(p)$ 
+   \\[2cm]  
+   \end{center}  
    
    \begin{center}
-    \includegraphics[scale=1]{schemaBloc.png}
+    \includegraphics[scale=1.2]{schemaBloc.png}
     \captionof{figure}{\textit{Bloc fonctionnel de l’asservissement d’une commande proportionnel intégrale}}
     \label{fig2}
    \end{center}
+  
    
-%*********************** Performance et Robustesse **************
+  
+ \section{Débit de fuite est constant} 
+   
+%*********************** Loop-shaping **************
 \chapter{Réalisation d'une commande Loop-shaping}
  La Performance c’est tout d’abord un blaba \cite{refbib1}.\\
  
