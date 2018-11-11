@@ -165,7 +165,7 @@ ina win ina thina ;;;;;;;;
 
 	\begin{center}
     \includegraphics[scale=1]{troisBacs.png}
-    \captionof{figure}{\textit{Procédé trois bacs}}
+    \captionof{figure}{\textit{Procédé trois bacs \cite{ref1}}}
     \label{fig1}
     \end{center}
 
@@ -252,7 +252,7 @@ $\xi_{p}= \underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm}\xi(p)$ \\
        donc : $w_{2}(p)=\frac {1}{p} $ \hspace{2mm} est un gabarit nécessaire pour une erreur de vitesse limitée à 1 lorsque l'entrée de consigne est une rampe de pente 1.\\
   \end{itemize} 
 
-\section{La spéfication sur la vitesse de convergence ainsi le Gabarit 3 pour la sensibilité}  %**** Question 6  *****
+\section{La spécification sur la vitesse de convergence ainsi le Gabarit 3 pour la sensibilité}  %**** Question 6 et 7 *****
 
 D'après notre cahier de charge, sur le système on veut avoir une convergence vers la consigne en mois de 3 seconde, et pour que le système soit plus rapide selon la bande passante on pose alors comme une contrainte:\\
  $|T(jw)|_{db}-|T(0)|_{db} \hspace{0.2cm} > \hspace{0.2cm} 3_{db}$\\ 
@@ -286,6 +286,16 @@ donc la condition est suffisante, et cela on va calculer le module en dB de la f
 on a alors : $|S(jw)|\hspace{0.2cm}\leq 1-(1/\sqrt{2}) \hspace{0.3cm} , \forall w\in[0,w_{c}] $ \\ 
 
  $20.log(1-(1/\sqrt{2})\hspace{0.2cm} \simeq \hspace{0.2cm} -10.67$  \\
+ 
+ $\Rightarrow |S(jw)|_{db}\hspace{0.2cm} \leq \hspace{0.2cm} -10.67 \hspace{0.3cm} , \forall w\in[0,w_{c}] $  \\
+ 
+ donc : le Gabarit 3 est nécessaire pour la fonction de sensibilité quelque soit $w\in[0,w_{c}]. $   
+ 
+ 
+\section{La spécification selon les oscillations (Gabarit 4)}  %**** Question 8 ***** 
+
+selon notre cahier de charge, il est indiqué que des oscillations ne sont pas souhaitables
+ 
    
  
 
@@ -294,30 +304,7 @@ on a alors : $|S(jw)|\hspace{0.2cm}\leq 1-(1/\sqrt{2}) \hspace{0.3cm} , \forall 
    
 %*********************** Loop-shaping **************
 \chapter{Réalisation d'une commande Loop-shaping}
- La Performance c’est tout d’abord un blaba \cite{refbib1}.\\
  
- La Robustesse c’est tout d’abord un blaba.\\ 
- % captures d’écrans 
- \begin{center}
-   \includegraphics[scale=0.7]{image2.png}
-   \captionof{figure}{\textit{Optimisation Robustesse}}
-   \label{fig3}
- \end{center}
- 
- La figure au-dessus a ... bla bla ....\\
- 
- Les bla bla ....\\
- 
- Néanmoins, cette structure n’est jamais stable au fil du temps, ... bla bla.\\
-  
- En court, il y a une différence entre ... bla bla ..., est fort envisageable qu’elle subira des changements dans le temps.
- 
- \paragraph{Définition:}
-  Bla bla ....
-
- \section{Section une}
-  ggggggggggggggg
-
 
 
 % *********************** Conclusion *****************
@@ -330,7 +317,7 @@ on a alors : $|S(jw)|\hspace{0.2cm}\leq 1-(1/\sqrt{2}) \hspace{0.3cm} , \forall 
 \bibliography{biblio}
 \end{document}
 
-%*****image trois bacs*****:  https://www.google.com/search?biw=1280&bih=677&tbm=isch&sa=1&ei=NGbnW4v_AdOegQathr7YBg&q=proc%C3%A9d%C3%A9+trois+bacs+master+1+eea+universit%C3%A9+toulouse+3&oq=proc%C3%A9d%C3%A9+trois+bacs+master+1+eea+universit%C3%A9+toulouse+3&gs_l=img.3...27876.33976.0.34828.13.13.0.0.0.0.324.1640.2j7j1j1.11.0....0...1c.1.64.img..2.0.0....0.ZiXwa3x17TI#imgrc=qrAb0UwJbCiQQM:
+
 
 
 
