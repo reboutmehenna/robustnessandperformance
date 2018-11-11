@@ -215,10 +215,10 @@ ina win ina thina ;;;;;;;;
  D’après la première commande on a un correcteur Proportionnel Intégrale, on obtient alors un déphasage de -$\pi$ en base fréquence et aussi un gain infini, et selon le cahier de charge pour avoir une convergence vers la consigne en moins de 3 seconde, il nous faut alors une bande passante élevée, ainsi un effet intégrateur afin d'avoir une erreur de position nulle. (correcteur PI $\Rightarrow$ erreur de position nulle)
  
  
- \section{Les contraintes sur le Gabarit 1}  %**** Question 5  *****
+ \section{Les contraintes sur le Gabarit 1 ainsi sur le Gabarit 2}  %**** Question 5  *****
  
- Dans ce Gabarit 1, on va déterminer ses contraintes sur la fonction de sensibilité permettant de satisfaire les spécifications b) et c) de notre cahier de charge.\\[0.2cm]\\
- 
+ Dans ces deux Gabarits, on va déterminer ses contraintes sur la fonction de sensibilité permettant de satisfaire les spécifications b) et c) de notre cahier de charge.\\[0.1cm]\\
+  %%***************** Gabarit 1 *********
  \begin{itemize}[label=\ding{108},font=\small\color{black}]
 \item Pour une erreur de position nulle on a:\\
 $\xi_{p}= \underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm}\xi(p)$ \\
@@ -229,21 +229,32 @@ $\xi_{p}= \underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm}\xi(p)$ \\
         Si on choisit $w_{1}(p)=\frac {1}{p} $ \hspace{1cm} tel que :\hspace{2mm}/$w_{1}(p).S(p)/<1$\\
         $\Rightarrow$ /$S(p)/<p$ \hspace{3mm} et on remplaçant dans la limite on obtient : \\ 
         $\xi_{p}=\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} p \hspace{2mm} \frac {1}{p} $\\
+        \\[1cm]
         $=\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm}$\\
         =\hspace{2mm}0  \\
-        \\[1cm]\\
+        \\[0.5cm]\\
        $\Rightarrow$  \hspace{2mm} $/S(jw)/_{H}$<$jw$  \hspace{2mm} tel que : $/S(jw)/_{H}$ est la valeur maximum que peut atteindre le module de $S(p)$ \\
        donc : $w_{1}(p)=\frac {1}{p} $ \hspace{2mm} est un gabarit nécessaire pour une erreur de position nulle.\\
-        
   \end{itemize}
- 
+    %*********** Gabarit 2  *******
   \begin{itemize}[label=\ding{108},font=\small\color{black}]
   \item Pour une erreur de vitesse limitée à 1 lorsque l'entrée de consigne est une rampe de pente 1 on a :\\ 
-ilaq mi doughalagh adkemlagh dagi erreur de vitesse .......  
-  
-  
+ $\xi_{v}= \underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm}\xi(p)$ \\
+    \hspace{2cm}=$\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} S(p)\hspace{2mm} r(p)$ \hspace{2cm} tel que: \hspace{0.5cm}$r(p)=\frac {1}{p^{2}}$ \\
+     \\[1mm]\\
+        Si on choisit $w_{2}(p)=\frac {1}{p} $ \hspace{1cm} tel que :\hspace{2mm}/$w_{2}(p).S(p)/<1$\\
+        $\Rightarrow$ /$S(p)/<p$ \hspace{3mm} et on remplaçant dans la limite on obtient alors : \\ 
+        $\xi_{v}=\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} p \hspace{2mm} \frac {1}{p^{2}} $\\
+        $=\underset{p\longrightarrow 0}{lim}\hspace{2mm} \frac {p^{2}}{p^{2}}\hspace{2mm}$\\
+        =\hspace{2mm}1 $\leq$1 \\
+        \\[5mm]\\
+        $\Rightarrow$  \hspace{2mm} $/S(jw)/_{H}$<$jw$  \hspace{2mm} tel que : $/S(jw)/_{H}$ est la valeur maximum que peut atteindre le module de $S(p)$ \\
+       donc : $w_{2}(p)=\frac {1}{p} $ \hspace{2mm} est un gabarit nécessaire pour une erreur de vitesse limitée à 1 lorsque l'entrée de consigne est une rampe de pente 1.\\
   \end{itemize} 
 
+\section{La spéfication sur la vitesse de convergence ainsi le Gabarit 3 pour la sensibilité}  %**** Question 6  *****
+
+gjghhbn
 
 
 
