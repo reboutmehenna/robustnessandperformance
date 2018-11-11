@@ -192,7 +192,30 @@ ina win ina thina ;;;;;;;;
   
    
   
- \section{Débit de fuite est constant} 
+ \section{Débit de fuite est constant}
+ 
+ 
+ On utilisant les lois de la Mécanique Des Fluides, la pression est proportionnelle au débit volumique, est on constatant que l'eau est incompressible donc le volume ne varie pas par rapport au temps, d’où le débit volumique soit constant, l'hypothèse est valable. 
+ 
+ 
+ \section{Le Diagramme asymptotique de $K(p)$ }
+ 
+ On a  $G(p)=\frac {U(p)}{\xi(p)}=K\frac {1+\tau_{i}p}{\tau_{i}p}$\\
+ 
+ est on obtient le diagramme suivant:\\
+ 
+ ilaqagh MATLAB pour le diagramme ........
+ 
+ 
+ \section{Les spécifications}
+
+ D’après la première commande on a un correcteur Proportionnel Intégrale, on obtient alors un déphasage de -$\pi$ en base fréquence et aussi un gain infini, et selon le cahier de charge pour avoir une convergence vers la consigne en moins de 3 seconde, il nous faut alors une bande passante élevée, ainsi un effet intégrateur afin d'avoir une erreur de position nulle. (correcteur PI $\Rightarrow$ erreur de position nulle)
+ 
+ 
+
+
+
+
    
 %*********************** Loop-shaping **************
 \chapter{Réalisation d'une commande Loop-shaping}
