@@ -54,6 +54,8 @@
 \FrenchFootnotes % à insérer si on utilise \usepackage[french]{babel}
 \usepackage{fancyhdr}
 \pagestyle{headings}
+\usepackage{pifont}  %pour les puces
+\usepackage{amsmath} %pour les puces
 
 \renewcommand{\appendixpagename}{Annexes}
 \renewcommand{\appendixtocname}{Annexes}
@@ -171,7 +173,8 @@ ina win ina thina ;;;;;;;;
 %*********************** Problématique **************
 \chapter{ Analyse d'une commande proportionnelle intégrales}
  %\addcontentsline{toc}{chapter}{Analyse d'une commande proportionnelle intégrales}
- \section{Schéma bloc de l'asservissement} 
+ 
+ \section{Schéma bloc de l'asservissement}  %**** Question 1 ***** 
    % captures d’écrans 
    On donne la fonction de transfert entre le débit d'entrée  $q_{e}(p)$ et la sortie  $h_{1}(p)$ par: \\
    \begin{center}
@@ -192,13 +195,13 @@ ina win ina thina ;;;;;;;;
   
    
   
- \section{Débit de fuite est constant}
+ \section{Débit de fuite est constant}  %**** Question 2  *****
  
  
  On utilisant les lois de la Mécanique Des Fluides, la pression est proportionnelle au débit volumique, est on constatant que l'eau est incompressible donc le volume ne varie pas par rapport au temps, d’où le débit volumique soit constant, l'hypothèse est valable. 
  
  
- \section{Le Diagramme asymptotique de $K(p)$ }
+ \section{Le Diagramme asymptotique de $K(p)$ }  %**** Question 3  *****
  
  On a  $G(p)=\frac {U(p)}{\xi(p)}=K\frac {1+\tau_{i}p}{\tau_{i}p}$\\
  
@@ -207,11 +210,39 @@ ina win ina thina ;;;;;;;;
  ilaqagh MATLAB pour le diagramme ........
  
  
- \section{Les spécifications}
+ \section{Les spécifications} %***** Question 4  *******
 
  D’après la première commande on a un correcteur Proportionnel Intégrale, on obtient alors un déphasage de -$\pi$ en base fréquence et aussi un gain infini, et selon le cahier de charge pour avoir une convergence vers la consigne en moins de 3 seconde, il nous faut alors une bande passante élevée, ainsi un effet intégrateur afin d'avoir une erreur de position nulle. (correcteur PI $\Rightarrow$ erreur de position nulle)
  
  
+ \section{Les contraintes sur le Gabarit 1}  %**** Question 5  *****
+ 
+ Dans ce Gabarit 1, on va déterminer ses contraintes sur la fonction de sensibilité permettant de satisfaire les spécifications b) et c) de notre cahier de charge.\\[0.2cm]\\
+ 
+ \begin{itemize}[label=\ding{108},font=\small\color{black}]
+\item Pour une erreur de position nulle on a:\\
+$\xi_{p}= \underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm}\xi(p)$ \\
+        \hspace{2cm}=$\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} S(p)\hspace{2mm} r(p)$ \hspace{2cm} tel que: \hspace{0.5cm}$r(p)=\frac {1}{p}$ \\
+        =$\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} S(p)\hspace{2mm} \frac {1}{p} $\\ 
+        =S(0)=0\\
+        \\[1mm]\\
+        Si on choisit $w_{1}(p)=\frac {1}{p} $ \hspace{1cm} tel que :\hspace{2mm}/$w_{1}(p).S(p)/<1$\\
+        $\Rightarrow$ /$S(p)/<p$ \hspace{3mm} et on remplaçant dans la limite on obtient : \\ 
+        $\xi_{p}=\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} p \hspace{2mm} \frac {1}{p} $\\
+        $=\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm}$\\
+        =\hspace{2mm}0  \\
+        \\[1cm]\\
+       $\Rightarrow$  \hspace{2mm} $/S(jw)/_{H}$<$jw$  \hspace{2mm} tel que : $/S(jw)/_{H}$ est la valeur maximum que peut atteindre le module de $S(p)$ \\
+       donc : $w_{1}(p)=\frac {1}{p} $ \hspace{2mm} est un gabarit nécessaire pour une erreur de position nulle.\\
+        
+  \end{itemize}
+ 
+  \begin{itemize}[label=\ding{108},font=\small\color{black}]
+  \item Pour une erreur de vitesse limitée à 1 lorsque l'entrée de consigne est une rampe de pente 1 on a :\\ 
+ilaq mi doughalagh adkemlagh dagi erreur de vitesse .......  
+  
+  
+  \end{itemize} 
 
 
 
