@@ -188,8 +188,8 @@ ina win ina thina ;;;;;;;;
    \end{center}  
    
    \begin{center}
-    \includegraphics[scale=1.2]{schemaBloc.png}
-    \captionof{figure}{\textit{Bloc fonctionnel de l’asservissement d’une commande proportionnel intégrale}}
+    \includegraphics[scale=0.8]{schemabloc.png}
+    \captionof{figure}{\textit{Schéma bloc pour un asservissement d’une commande proportionnel intégrale}}
     \label{fig2}
    \end{center}
   
@@ -222,18 +222,18 @@ ina win ina thina ;;;;;;;;
  \begin{itemize}[label=\ding{108},font=\small\color{black}]
 \item Pour une erreur de position nulle on a:\\
 $\xi_{p}= \underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm}\xi(p)$ \\
-        \hspace{2cm}=$\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} S(p)\hspace{2mm} r(p)$ \hspace{2cm} tel que: \hspace{0.5cm}$r(p)=\frac {1}{p}$ \\
+        =$\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} S(p)\hspace{2mm} r(p)$ \hspace{2cm} tel que: \hspace{0.5cm}$r(p)=\frac {1}{p}$ \\
         =$\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} S(p)\hspace{2mm} \frac {1}{p} $\\ 
         =S(0)=0\\
         \\[1mm]\\
-        Si on choisit $w_{1}(p)=\frac {1}{p} $ \hspace{1cm} tel que :\hspace{2mm}/$w_{1}(p).S(p)/<1$\\
-        $\Rightarrow$ /$S(p)/<p$ \hspace{3mm} et on remplaçant dans la limite on obtient : \\ 
+        Si on choisit $w_{1}(p)=\frac {1}{p} $ \hspace{1cm} tel que :\hspace{2mm}|$w_{1}(p).S(p)|<1$\\
+        $\Rightarrow$ |$S(p)|<p$ \hspace{3mm} et on remplaçant dans la limite on obtient : \\ 
         $\xi_{p}=\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} p \hspace{2mm} \frac {1}{p} $\\
-        \\[1cm]
+        %**\\[0.2cm]
         $=\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm}$\\
         =\hspace{2mm}0  \\
         \\[0.5cm]\\
-       $\Rightarrow$  \hspace{2mm} $/S(jw)/_{H}$<$jw$  \hspace{2mm} tel que : $/S(jw)/_{H}$ est la valeur maximum que peut atteindre le module de $S(p)$ \\
+       $\Rightarrow$  \hspace{2mm} $|S(jw)|_{H}$<$jw$  \hspace{2mm} tel que : $|S(jw)|_{H}$ est la valeur maximum que peut atteindre le module de $S(p)$ \\
        donc : $w_{1}(p)=\frac {1}{p} $ \hspace{2mm} est un gabarit nécessaire pour une erreur de position nulle.\\
   \end{itemize}
     %*********** Gabarit 2  *******
@@ -242,19 +242,52 @@ $\xi_{p}= \underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm}\xi(p)$ \\
  $\xi_{v}= \underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm}\xi(p)$ \\
     \hspace{2cm}=$\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} S(p)\hspace{2mm} r(p)$ \hspace{2cm} tel que: \hspace{0.5cm}$r(p)=\frac {1}{p^{2}}$ \\
      \\[1mm]\\
-        Si on choisit $w_{2}(p)=\frac {1}{p} $ \hspace{1cm} tel que :\hspace{2mm}/$w_{2}(p).S(p)/<1$\\
-        $\Rightarrow$ /$S(p)/<p$ \hspace{3mm} et on remplaçant dans la limite on obtient alors : \\ 
+        Si on choisit $w_{2}(p)=\frac {1}{p} $ \hspace{1cm} tel que :\hspace{2mm}|$w_{2}(p).S(p)|<1$\\
+        $\Rightarrow$ |$S(p)|<p$ \hspace{3mm} et on remplaçant dans la limite on obtient alors : \\ 
         $\xi_{v}=\underset{p\longrightarrow 0}{lim}\hspace{2mm} p\hspace{2mm} p \hspace{2mm} \frac {1}{p^{2}} $\\
         $=\underset{p\longrightarrow 0}{lim}\hspace{2mm} \frac {p^{2}}{p^{2}}\hspace{2mm}$\\
         =\hspace{2mm}1 $\leq$1 \\
         \\[5mm]\\
-        $\Rightarrow$  \hspace{2mm} $/S(jw)/_{H}$<$jw$  \hspace{2mm} tel que : $/S(jw)/_{H}$ est la valeur maximum que peut atteindre le module de $S(p)$ \\
+        $\Rightarrow$  \hspace{2mm} $|S(jw)|_{H}$<$jw$  \hspace{2mm} tel que : $|S(jw)|_{H}$ est la valeur maximum que peut atteindre le module de $S(p)$ \\
        donc : $w_{2}(p)=\frac {1}{p} $ \hspace{2mm} est un gabarit nécessaire pour une erreur de vitesse limitée à 1 lorsque l'entrée de consigne est une rampe de pente 1.\\
   \end{itemize} 
 
 \section{La spéfication sur la vitesse de convergence ainsi le Gabarit 3 pour la sensibilité}  %**** Question 6  *****
 
-gjghhbn
+D'après notre cahier de charge, sur le système on veut avoir une convergence vers la consigne en mois de 3 seconde, et pour que le système soit plus rapide selon la bande passante on pose alors comme une contrainte:\\
+ $|T(jw)|_{db}-|T(0)|_{db} \hspace{0.2cm} > \hspace{0.2cm} 3_{db}$\\ 
+ \\[0.07cm]\\
+ et pour avoir une condition suffisante, alors d'après la contrainte supposée ci-dessus on a :\\
+ \\[1mm]\\
+ 20.log($|T(jw)|_{db}-|T(0)|_{db}$) \hspace{0.2cm} > \hspace{0.2cm} 20.logS($3_{db}$)\\
+ 
+$\Rightarrow\hspace{0.2cm} \frac {|T(jw)|}{|T(0)|} \hspace{0.2cm} > \hspace{0.2cm} 10^{3/20} \hspace{0.2cm}=1/\sqrt{2} \hspace{0.5cm} avec : \hspace{0.2cm} |T(0)|=1$ \\
+
+$\Rightarrow\hspace{0.2cm} |T(jw)| \hspace{0.2cm} > \hspace{0.2cm} 1/\sqrt{2}$ \\
+
+on choisit alors :$\hspace{0.3cm} |S(jw)|\hspace{0.2cm}\leq \hspace{0.2cm} 1-(1/\sqrt{2}).......(1)$ \\
+ 
+et on a aussi: $\hspace{0.3cm} |T(jw)+S(jw)|\hspace{0.2cm}= \hspace{0.2cm} 1$\\
+
+alors: $\hspace{0.3cm} |T(jw)|+|S(jw)|\hspace{0.2cm}\geq \hspace{0.2cm} 1........(2)$\\  
+
+de (1) on a : $1/\sqrt{2}\leq 1-|S(jw)|........(3)$ \\
+
+et aussi de (2) $|T(jw)|\geq 1-|S(jw)|.......(4)$ \\
+
+alors de (3) et de (4) on obtient: \\
+ 
+ $\hspace{0.3cm} 1/\sqrt{2}\hspace{0.2cm} \leq 1-|S(jw)| \hspace{0.2cm}\leq |T(jw)|$ \\
+ 
+ $\Rightarrow \hspace{0.3cm} |T(jw)| \hspace{0.2cm} \geq 1/\sqrt{2}$ \\
+ 
+donc la condition est suffisante, et cela on va calculer le module en dB de la fonction de sensibilité selon ce choit : \\
+
+on a alors : $|S(jw)|\hspace{0.2cm}\leq 1-(1/\sqrt{2}) \hspace{0.3cm} , \forall w\in[0,w_{c}] $ \\ 
+
+ $20.log(1-(1/\sqrt{2})\hspace{0.2cm} \simeq \hspace{0.2cm} -10.67$  \\
+   
+ 
 
 
 
