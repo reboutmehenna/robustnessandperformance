@@ -155,21 +155,41 @@
 %*********************** INTRODUCTION **************
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
+
+Dans ce mini projet on va manipuler la commande robuste d’un système non linéaire autour d’un point de fonctionnement, ce que va nous permettre d’utiliser les loi de commande robuste comme le Loop-shaping.\\
+
  
-  Une des raisons de construire des logiciels est pour une utilité utilisateurs \footnote{\url{http://master-eea.univ-tlse3.fr/wp-content/uploads/2016/11/TP1.pdf}}.bla bla
+ \paragraph{Définition de la Robustesse :}  capacité à rester opérationnel malgré de grandes amplitudes de conditions d’activité.
+L’amélioration de la robustesse permet de retarder le moment où une dégradation sera réellement grave du point de vue de ceux qui utilisent le service (ne plus avoir de réseau téléphonique, par exemple).
+Cela passe notamment par la mise en place de redondances pour permettre à la QoS de rester acceptable par les utilisateurs même au-delà des conditions techniques « normales » de fonctionnement. Il y aura toujours une limite, je vous l’accorde, mais les actions renforcement permettent de retarder le moment où vous déclencherez la cellule de crise opérationnelle \cite{ref1}
     
     %******************* PROBLEMATIQUE**********
  \chapter*{Présentation du procédé}
 \addcontentsline{toc}{chapter}{Présentation du procédé}                                                  
-ina win ina thina ;;;;;;;;
 
-	\begin{center}
+\begin{center}
     \includegraphics[scale=1]{troisBacs.png}
-    \captionof{figure}{\textit{Procédé trois bacs \cite{ref1}}}
+    \captionof{figure}{\textit{Procédé trois bacs \cite{ref2}}}
     \label{fig1}
     \end{center}
 
+Le système représenté sur la figure 1 est composé de trois bacs cylindriques en plexiglas de section S. Ces trois bacs sont disposes en série (de gauche à droite, on trouve les bacs 1, 3 et 2) et sont relies par des tuyaux d’écoulement de section Sn. Le dernier bac (2) se vide par un cylindre également de section Sn dans un réservoir situé sous les bacs.
+Deux pompes de débit Q1(t) et Q2(t) permettent de remplir respectivement les bacs 1 et 2 avec l’eau récupérée dans le  réservoir, le système fonctionnant en circuit fermé.
+Lors de cette manipulation, nous allons nous intéresser à la régulation de niveau d’eau dans les bacs. Les niveaux, notés H1(t), H3(t) et H2(t) ne peuvent excéder la valeur de 0,6 m.
+Les valeurs données par le constructeur sont : $S = 0,0154 \hspace{2mm} m2$ et $Sn = 5*10^{5} \hspace{2mm} m2$.
+Une armoire de commande, reliée au procédé, permet de commander (en tension) les deux pompes et de mesurer (en tension) les trois hauteurs d’eau dans les bacs par l'intermédiaire de capteurs de niveau ; ces capteurs sont basés sur la mesure de la pression dans les bacs.
 
+\paragraph{Cahier de charge :} 
+
+(a) Le système sera stable en boucle fermée.\\
+(b) Une erreur de position nulle.\\
+(c) Une erreur de vitesse limitée à 1 i.e. lorsque l'entrée de consigne est une rampe de pente 1.\\
+(d) Une convergence vers la consigne en moins de 3 seconde, sans oscillations, ni dépassement.\\
+(e) Un rejet de la perturbation de fuite.\\
+(f) Un rejet du bruit de mesure au-delà de 100 Hz d’au moins de 60 dB par.\\  
+
+
+	
 %*********************** Problématique **************
 \chapter{ Analyse d'une commande proportionnelle intégrales}
  %\addcontentsline{toc}{chapter}{Analyse d'une commande proportionnelle intégrales}
