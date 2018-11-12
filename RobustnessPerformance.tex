@@ -10,7 +10,8 @@
 \usepackage{setspace}
 
 \frenchbsetup{StandardLists=true} % à inclure si on utilise \usepackage[french]{babel}
-\usepackage{enumitem}
+%\usepackage{enumitem}
+\usepackage[shortlabels]{enumitem}
 \usepackage{amssymb}
 
 \usepackage{color}
@@ -164,8 +165,7 @@ L’amélioration de la robustesse permet de retarder le moment où une dégrada
 Cela passe notamment par la mise en place de redondances pour permettre à la QoS de rester acceptable par les utilisateurs même au-delà des conditions techniques « normales » de fonctionnement. Il y aura toujours une limite, je vous l’accorde, mais les actions renforcement permettent de retarder le moment où vous déclencherez la cellule de crise opérationnelle \cite{ref1}
     
     %******************* PROBLEMATIQUE**********
- \chapter*{Présentation du procédé}
-\addcontentsline{toc}{chapter}{Présentation du procédé}                                                  
+ \chapter{Présentation du procédé}                                                
 
 \begin{center}
     \includegraphics[scale=1]{troisBacs.png}
@@ -181,14 +181,14 @@ Une armoire de commande, reliée au procédé, permet de commander (en tension) 
 
 \paragraph{Cahier de charge :} 
 
-(a) Le système sera stable en boucle fermée.\\
-(b) Une erreur de position nulle.\\
-(c) Une erreur de vitesse limitée à 1 i.e. lorsque l'entrée de consigne est une rampe de pente 1.\\
-(d) Une convergence vers la consigne en moins de 3 seconde, sans oscillations, ni dépassement.\\
-(e) Un rejet de la perturbation de fuite.\\
-(f) Un rejet du bruit de mesure au-delà de 100 Hz d’au moins de 60 dB par.\\  
-
-
+ \begin{enumerate}[(a)]
+   \item Le système sera stable en boucle fermée
+   \item Une erreur de position nulle
+   \item Une erreur de vitesse limitée à 1 i.e. lorsque l'entrée de consigne est une rampe de pente 1
+   \item Une convergence vers la consigne en moins de 3 seconde, sans oscillations, ni dépassement.
+   \item Un rejet de la perturbation de fuite.
+   \item Un rejet du bruit de mesure au-delà de 100 Hz d’au moins de 60 dB par.
+ \end{enumerate}
 	
 %*********************** Problématique **************
 \chapter{ Analyse d'une commande proportionnelle intégrales}
